@@ -14,6 +14,22 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/xenial64"
 
+
+  config.vm.define "player1" do |player1|
+    player1.vm.hostname = "player1"
+    player1.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+    player1.vm.network "private_network", ip: "192.168.2.11"
+    player1.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
+  end
+
+  config.vm.define "player2" do |player2|
+    player2.vm.hostname = "player2"
+    player2.vm.network "private_network", ip: "192.168.2.12"
+    player2.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
+
+  end
+
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
