@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>Request</title>
-<script src="jquery-3.5.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -15,13 +14,16 @@
 
     <hr>
 
-      <p>Here is the information you have submitted:</p>
+      <h4>Here is the information you have submitted:</h4><br>
 
-      <ol>
-        <li><em>First Name:</em> <?php echo $_POST["fname"]?></li>
-        <li><em>Last Name:</em> <?php echo $_POST["lname"]?></li>
-        <li><em>Email:</em> <?php echo $_POST["email"]?></li>
-      </ol>
+
+      <p>First Name: </p>
+      <p><?php echo $_POST["fname"]?></p>
+      <p>Last Name: </p>
+      <p><?php echo $_POST["lname"]?></p>
+      <p>Email: </p>
+      <p><?php echo $_POST["email"]?></p>
+
     </hr>
 
   </div>
