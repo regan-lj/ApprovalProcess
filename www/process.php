@@ -31,13 +31,13 @@
       $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
       $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
 
-      $fname = $_POST["fname"]
-      $lname = $_POST["lname"]
-      $email = $_POST["email"]
+      $fname = $_POST["fname"];
+      $lname = $_POST["lname"];
+      $email = $_POST["email"];
 
-      $sql = "INSERT INTO requests (fname, lname, email) VALUES (?,?,?)";
-      $stmt= $pdo->prepare($sql);
+      $stmt = $pdo->prepare("INSERT INTO requests (fname, lname, email) VALUES (?,?,?)");
       $stmt->execute([$fname, $lname, $email]);
+    ?>
 
   </div>
 
