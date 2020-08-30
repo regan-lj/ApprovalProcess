@@ -20,6 +20,8 @@
       <input type="text" id="lname" name="lname" required><br>
       <label for="email">Email:</label><br>
       <input type="text" id="email" name="email" required><br><br>
+      <label for="description">Description:</label><br>
+      <input type="text" id="description" name="description" required><br><br>
     </hr>
 
     <button type="submit" class="registerbtn">Submit</button>

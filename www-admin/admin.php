@@ -17,7 +17,7 @@
 
         $db_host   = '192.168.2.12';
         $db_name   = 'fvision';
-        $db_user   = 'webadmin';
+        $db_user   = 'webuser';
         $db_passwd = 'insecure_db_pw';
 
         $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
@@ -27,7 +27,7 @@
         $q = $pdo->query("SELECT * FROM requests");
 
         while($row = $q->fetch()){
-        echo "<h3>".$row["fname"]."</h3><p>".$row["email"]."</p>\n";
+          echo "<h3>".$row["fname"]."</h3><p>".$row["email"]."</p>\n";
         }
 
       ?>

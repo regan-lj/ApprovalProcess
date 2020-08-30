@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "webuser" do |webuser|
 
     webuser.vm.hostname = "webuser"
-    webuser.vm.network "forwarded_port", guest: 80, host: 1234, host_ip: "127.0.0.1"
+    webuser.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
     webuser.vm.network "private_network", ip: "192.168.2.11"
     webuser.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 
@@ -104,7 +104,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "webadmin" do |webadmin|
 
     webadmin.vm.hostname = "webadmin"
-    webadmin.vm.network "forwarded_port", guest: 80, host: 4567, host_ip: "127.0.0.1"
+    webadmin.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1"
     webadmin.vm.network "private_network", ip: "192.168.2.13"
     webadmin.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 

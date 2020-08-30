@@ -20,6 +20,8 @@
       <p><?php echo $_POST["lname"]?></p>
       <p>Email: </p>
       <p><?php echo $_POST["email"]?></p>
+      <p>Description: </p>
+      <p><?php echo $_POST["description"]?></p>
     </hr>
 
     <?php
@@ -34,9 +36,10 @@
       $fname = $_POST["fname"];
       $lname = $_POST["lname"];
       $email = $_POST["email"];
+      $description = $_POST["description"];
 
-      $stmt = $pdo->prepare("INSERT INTO requests (fname, lname, email) VALUES (?,?,?)");
-      $stmt->execute([$fname, $lname, $email]);
+      $stmt = $pdo->prepare("INSERT INTO requests (fname, lname, email, description) VALUES (?,?,?,?)");
+      $stmt->execute([$fname, $lname, $email, $description]);
     ?>
 
   </div>
