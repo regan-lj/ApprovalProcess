@@ -9,7 +9,7 @@
 
   <div class="container">
 
-    <h1>Make a Request:</h1>
+    <h1>Make a Request</h1>
     <p>Please fill in this form to submit a request.</p><br>
 
     <form action="/process.php" method="post">

@@ -101,27 +101,27 @@ Vagrant.configure("2") do |config|
 
   end
 
-  # config.vm.define "adminweb" do |webadmin|
-  #
-  #   webadmin.vm.hostname = "webadmin"
-  #   webadmin.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
-  #   webadmin.vm.network "private_network", ip: "192.168.2.13"
-  #   webadmin.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
-  #
-  #   webadmin.vm.provision "shell", inline: <<-SHELL
-  #     apt-get update
-  #     apt-get install -y apache2 php libapache2-mod-php php-mysql
-  #
-  #     # Change VM's webserver's configuration to use shared folder.
-  #     # (Look inside website.conf for specifics.)
-  #     cp /vagrant/website.conf /etc/apache2/sites-available/
-  #     # install our website configuration and disable the default
-  #     a2ensite website
-  #     a2dissite 000-default
-  #     service apache2 reload
-  #     SHELL
-  #
-  # end
+  config.vm.define "webadmin" do |webadmin|
+
+    webadmin.vm.hostname = "webadmin"
+    webadmin.vm.network "forwarded_port", guest: 80, host: 4567, host_ip: "127.0.0.1"
+    webadmin.vm.network "private_network", ip: "192.168.2.13"
+    webadmin.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
+
+    webadmin.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+      apt-get install -y apache2 php libapache2-mod-php php-mysql
+
+      # Change VM's webserver's configuration to use shared folder.
+      # (Look inside website-admin.conf for specifics.)
+      cp /vagrant/website-admin.conf /etc/apache2/sites-available/
+      # install our website configuration and disable the default
+      a2ensite website-admin
+      a2dissite 000-default
+      service apache2 reload
+      SHELL
+
+  end
 
 
   # Disable automatic box update checking. If you disable this, then
