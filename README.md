@@ -44,6 +44,7 @@ To access the database itself:
     $ vagrant ssh dbserver
     $ export MYSQL_PWD=’insecure_mysqlroot_pw’
     $ mysql -u root
+    $ use fvision
 
 Remember to shut down once finished:
 	
