@@ -21,7 +21,6 @@
   // An email function could be called inside each of these if statements
   if( isset( $_POST['accept'] ) ) {
     $did = $_POST['id'];
-    echo "<script type='text/javascript'>alert('$did');</script>";
     $stmt = $pdo->prepare("UPDATE requests SET status='Approved' WHERE request_id=?");
     $stmt->execute([$did]);
   } else if ( isset($_POST['reject']) ) {
