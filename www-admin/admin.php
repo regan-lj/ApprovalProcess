@@ -18,12 +18,12 @@
   $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
 
   // Alter status
-  // if( isset( $_POST['accept'] ) ) {
-  //   $did = $_POST['id'];
-  //   $stmt = $pdo->prepare("UPDATE requests SET status='Accepted' WHERE request_id=?");
-  //   $stmt->execute($did);
-  // } else
-  if ( isset($_POST['reject']) ) {
+  if( isset( $_POST['accept'] ) ) {
+    $did = $_POST['id'];
+    echo "<script type='text/javascript'>alert('$did');</script>";
+    $stmt = $pdo->prepare("UPDATE requests SET status='Approved' WHERE request_id=?");
+    $stmt->execute([$did]);
+  } else if ( isset($_POST['reject']) ) {
       $did = $_POST['id'];
       $stmt = $pdo->prepare("UPDATE requests SET status='Rejected' WHERE request_id=?");
       $stmt->execute([$did]);
@@ -50,12 +50,13 @@
 
           echo "<form method='POST'>
                 <input type=hidden name=id value=".$row["request_id"]." >
-
+                <button type='submit' class='accept' name='accept'>Accept</button><br>
+                </form>";
+          echo "<form method='POST'>
+                <input type=hidden name=id value=".$row["request_id"]." >
                 <button type=submit class='reject' name=reject>Reject</button><br><br><br>
                 </form>";
-
         }
-        // <button type='submit' class='accept' name='accept'>Accept</button><br>
 
       ?>
     </hr>
