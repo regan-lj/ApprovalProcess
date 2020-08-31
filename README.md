@@ -31,11 +31,13 @@ To open the first web server, where a user can submit a request:
 
     $ open http://127.0.0.1:8080/ // Mac user
     $ start http://127.0.0.1:8080/ // Windows user
+    $ xdg-open http://127.0.0.1:8080/ // Linux user
 
 To open the second web server, where an admin can view and respond to requests:
 
-    $ open http://127.0.0.1:8081/admin.php // Mac user and Linux??
+    $ open http://127.0.0.1:8081/admin.php // Mac user
     $ start http://127.0.0.1:8081/admin.php // Windows user
+    $ xdg-open http://127.0.0.1:8081/admin.php // Linux user
 
 To access the database itself:
 
