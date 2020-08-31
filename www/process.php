@@ -21,6 +21,8 @@
       $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
       $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
 
+      // If customising the database, the insert statement and variables will need to be altered accordingly.
+
       $fname = $_POST["fname"];
       $lname = $_POST["lname"];
       $email = $_POST["email"];

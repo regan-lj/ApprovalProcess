@@ -1,3 +1,6 @@
+-- These attributes are an idea of what data an application process might need to store.
+-- If you are customising, these attributes can be changed to reflect your purpose.
+
 CREATE TABLE requests (
   request_id INT AUTO_INCREMENT,
   submission_time DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -9,6 +12,7 @@ CREATE TABLE requests (
   PRIMARY KEY (request_id)
 );
 
+-- Some example rows
 INSERT INTO requests (fname, lname, email, description) VALUES ('Bobby', 'Fischer', 'bfischer@gmail.com', 'Hi, my name is Bobby and I would like to join your chess club. I am an avid player and am free for Thursday meetups.');
 INSERT INTO requests (fname, lname, email, description) VALUES ("Lewis", "Hamilton", "lewishamilton@merc.com", "Hi, I am applying for the position of go cart manager. I am hard working, and have a lot of experience with go carts.");
 INSERT INTO requests (fname, lname, email, description) VALUES ("Jay", "Pritchett", "jay@pritchettclosets.com", "I'm from Pritchetts closets and I would like to enquire about an order for 5000 wooden panels of various sizes.");

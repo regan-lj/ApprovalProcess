@@ -15,6 +15,9 @@
     <div class="input">
     <form action="/process.php" method="post">
     <hr>
+
+      <!-- The below labels and inputs can be customised as required -->
+
       <label for="fname">First name:</label><br>
       <input type="text" id="fname" name="fname" required><br>
       <label for="lname">Last name:</label><br>
