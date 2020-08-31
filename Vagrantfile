@@ -33,7 +33,6 @@ Vagrant.configure("2") do |config|
       a2ensite website
       a2dissite 000-default
       service apache2 reload
-      # open http://127.0.0.1:1234/
       SHELL
 
   end

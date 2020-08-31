@@ -12,6 +12,7 @@
     <h1>Make a Request</h1>
     <p>Please fill in this form to submit a request.</p><br>
 
+    <div class="input">
     <form action="/process.php" method="post">
     <hr>
       <label for="fname">First name:</label><br>
@@ -19,7 +20,7 @@
       <label for="lname">Last name:</label><br>
       <input type="text" id="lname" name="lname" required><br>
       <label for="email">Email:</label><br>
-      <input type="text" id="email" name="email" required><br><br>
+      <input type="text" id="email" name="email" required><br>
       <label for="description">Description:</label><br>
       <input type="text" id="description" name="description" required><br><br>
     </hr>
@@ -27,6 +28,7 @@
     <button type="submit" class="registerbtn">Submit</button>
 
     </form>
+    </div>
 
   </div>
 

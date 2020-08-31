@@ -5,34 +5,34 @@
   padding: 16px;
 }
 
-/* Full-width input fields */
-input[type=text] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
 /* Overwrite default styles of hr */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
   position: relative;
-  max-width: 60%;
+  width: 60%;
+  margin-right: auto;
 }
 
-/* Set a style for the submit/register button */
-.registerbtn {
-  background-color: #4CAF50;
+h1 {
+  text-align: center;
+}
+
+h3,p {
+  margin: 0;
+  padding: 0;
+}
+
+.align {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+/* Set a style for the accept/reject buttons */
+.accept, .reject {
   color: white;
-  padding: 16px 20px;
+  padding: 12px 10px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -40,15 +40,14 @@ hr {
   opacity: 0.9;
 }
 
-.registerbtn:hover {
+.accept {
+  background-color: #4CAF50;
+}
+
+.reject {
+  background-color: #CD5C5C;
+}
+
+.accept:hover, .reject:hover {
   opacity:1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-h1, p, h3 {
-  text-align: center;
 }

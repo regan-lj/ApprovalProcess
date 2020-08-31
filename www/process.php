@@ -12,18 +12,6 @@
     <h1>Thank You!</h1>
     <p>You will recieve a response within 5 working days.</p><br>
 
-    <hr>
-      <h3>Here is the information you have submitted:</h3><br>
-      <p>First Name: </p>
-      <p><?php echo $_POST["fname"]?></p>
-      <p>Last Name: </p>
-      <p><?php echo $_POST["lname"]?></p>
-      <p>Email: </p>
-      <p><?php echo $_POST["email"]?></p>
-      <p>Description: </p>
-      <p><?php echo $_POST["description"]?></p>
-    </hr>
-
     <?php
 
       $db_host   = '192.168.2.12';
